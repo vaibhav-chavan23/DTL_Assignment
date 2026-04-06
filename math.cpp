@@ -19,6 +19,10 @@ bool isPrime(int n) {
     return true;
 }
 
+int add(int a, int b) {
+	return a+b;
+}
+
 // Kunal : Fibonacci
 void fibonacci(int n) {
     int a = 0, b = 1, c;
@@ -42,11 +46,12 @@ int main() {
         cout << "1. Factorial\n";
         cout << "2. Prime Check\n";
         cout << "3. Fibonacci\n";
-        cout << "4. Exit\n";
+        cout << "4. Addition\n";
+        cout << "5. Exit\n";
         cout << "Enter choice: ";
         cin >> choice;
 
-        if(choice == 4) break;
+        if(choice == 5) break;
 
         cout << "Enter number: ";
         cin >> n;
@@ -66,6 +71,12 @@ int main() {
             case 3:
                 fibonacci(n);
                 break;
+                
+            case 4:
+            	int n2;
+            	cout << "Enter second number: ";
+            	cin >> n2;
+            	cout << "Addition is " << add(n, n2) << endl;
 
             default:
                 cout << "Invalid choice!\n";
